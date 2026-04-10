@@ -698,12 +698,5 @@
         "modele": "C8 Preliator",
         "prix_par_jour": 300000.0,
         "disponible": false
-    },
-    {
-        "id": 3,
-        "marque": "tet",
-        "modele": "test",
-        "prix_par_jour": 12300.0,
-        "disponible": true
     }
 ]
