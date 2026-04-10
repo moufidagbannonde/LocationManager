@@ -59,6 +59,15 @@ class Agence:
                 return v["prix_par_jour"] * jours
         return 0
 
+    def locations_par_client(self, client_id):
+        return [loc for loc in self.locations if loc["client_id"] == client_id]
+
+    def total_gains(self):
+        total = 0
+        for loc in self.locations:
+            total += self.calcul_prix(loc["vehicule_id"], loc["jours"])
+        return total
+
     def top_vehicules(self):
         compteur = {}
 

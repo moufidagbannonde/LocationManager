@@ -17,6 +17,8 @@ def main():
         print("7. Voir locations")
         print("8. Filtrer par prix")
         print("9. Véhicules les plus loués")
+        print("10. Locations d'un client")
+        print("11. Total gains agence")
         print("0. Quitter")
         print("==========================")
 
@@ -56,7 +58,8 @@ def main():
             location = agence.louer_vehicule(client_id, vehicule_id, jours)
 
             if location:
-                print(" Location créée :", location)
+                prix = agence.calcul_prix(vehicule_id, jours)
+                print(f" Location créée : {location} | Prix total : {prix} DA")
             else:
                 print(" Véhicule indisponible ou introuvable")
 
@@ -85,6 +88,19 @@ def main():
         elif choix == "9":
             print("\n Top véhicules loués :")
             print(agence.top_vehicules())
+
+        elif choix == "10":
+            client_id = int(input("Client ID : "))
+            locs = agence.locations_par_client(client_id)
+            if locs:
+                print(f"\n Locations du client {client_id} :")
+                for l in locs:
+                    print(l)
+            else:
+                print(" Aucune location pour ce client")
+
+        elif choix == "11":
+            print(f"\n Total gains agence : {agence.total_gains()} DA")
 
         # ---------------- QUITTER ----------------
         elif choix == "0":
