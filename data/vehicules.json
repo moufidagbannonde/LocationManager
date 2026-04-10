@@ -2,15 +2,15 @@
     {
         "id": 1,
         "marque": "Cadillac",
-        "modele": "C17",
-        "prix_par_jour": 2500.0,
+        "modele": "C-14",
+        "prix_par_jour": 1540.0,
         "disponible": true
     },
     {
         "id": 2,
-        "marque": "BMW",
-        "modele": "B46",
-        "prix_par_jour": 4500.0,
+        "marque": "Artisdie",
+        "modele": "A-47",
+        "prix_par_jour": 14785.0,
         "disponible": true
     }
 ]

@@ -1,21 +1,22 @@
-from services.agence import Agence
-from services.display import afficher_vehicule, afficher_client, afficher_location
+from services.display import afficher_location, afficher_client
+import services.vehicule_service as vs
+import services.location_service as ls
 import services.client_service as cs
 
 
 def main():
-    agence = Agence()
-
-    print(" Système de location de véhicules (mode test)")
+    print(" Système de location de véhicules")
 
     while True:
         print("\n========== MENU ==========")
+        print("--- Véhicules ---")
         print("1. Ajouter véhicule")
         print("2. Voir véhicules")
-        print("3. Filtrer véhicules disponibles")
+        print("3. Véhicules disponibles")
         print("4. Modifier véhicule")
         print("5. Supprimer véhicule")
         print("6. Filtrer par prix")
+        print("--- Locations ---")
         print("7. Louer véhicule")
         print("8. Retourner véhicule")
         print("9. Voir toutes les locations")
@@ -33,59 +34,57 @@ def main():
 
         choix = input("Choix : ")
 
+        # ---------------- VÉHICULES ----------------
         if choix == "1":
             marque = input("Marque : ")
             modele = input("Modèle : ")
             prix = float(input("Prix par jour : "))
-
-            agence.ajouter_vehicule(marque, modele, prix)
+            vs.ajouter_vehicule(marque, modele, prix)
 
         elif choix == "2":
-            agence.afficher_vehicules()
+            vs.lister_vehicules()
 
         elif choix == "3":
-            agence.vehicules_disponibles()
+            vs.vehicules_disponibles()
 
         elif choix == "4":
-            id = int(input("ID : "))
+            vid = int(input("ID : "))
             marque = input("Nouvelle marque (vide si rien) : ")
-            modele = input("Nouveau modèle : ")
-            prix = input("Nouveau prix : ")
-
-            prix = float(prix) if prix else None
-
-            agence.modifier_vehicule(id, marque or None, modele or None, prix)
+            modele = input("Nouveau modèle (vide si rien) : ")
+            prix = input("Nouveau prix (vide si rien) : ")
+            vs.modifier_vehicule(vid, marque or None, modele or None, float(prix) if prix else None)
 
         elif choix == "5":
-            id = int(input("ID à supprimer : "))
-            agence.supprimer_vehicule(id)
+            vid = int(input("ID à supprimer : "))
+            vs.supprimer_vehicule(vid)
 
         elif choix == "6":
             prix = float(input("Prix max : "))
-            agence.filtrer_par_prix(prix)
+            vs.filtrer_par_prix(prix)
 
         # ---------------- LOCATIONS ----------------
         elif choix == "7":
             client_id = int(input("Client ID : "))
             vehicule_id = int(input("Véhicule ID : "))
             jours = int(input("Nombre de jours : "))
-            location = agence.louer_vehicule(client_id, vehicule_id, jours)
-            if location:
-                prix = agence.calcul_prix(vehicule_id, jours)
-                afficher_location(location)
-                print(f"   💰 Prix total : {prix} DA")
+            location, erreur = ls.louer_vehicule(client_id, vehicule_id, jours)
+            if erreur:
+                print(f"❌ {erreur}")
             else:
-                print("❌ Véhicule indisponible ou introuvable")
+                prix = ls.calcul_prix(vehicule_id, jours)
+                afficher_location(location)
+                print(f"   💰 Prix total : {prix} ")
 
         elif choix == "8":
             location_id = int(input("Location ID : "))
-            if agence.retourner_vehicule(location_id):
+            ok, erreur = ls.retourner_vehicule(location_id)
+            if ok:
                 print("✅ Véhicule retourné")
             else:
-                print("❌ Location introuvable")
+                print(f"❌ {erreur}")
 
         elif choix == "9":
-            locs = agence.voir_locations()
+            locs = ls.voir_locations()
             if locs:
                 print("\n Locations en cours :")
                 for l in locs:
@@ -95,7 +94,7 @@ def main():
 
         elif choix == "10":
             client_id = int(input("Client ID : "))
-            locs = agence.locations_par_client(client_id)
+            locs = ls.locations_par_client(client_id)
             if locs:
                 print(f"\n Locations du client {client_id} :")
                 for l in locs:
@@ -103,9 +102,8 @@ def main():
             else:
                 print("⚠️ Aucune location pour ce client")
 
-        # ---------------- STATS ----------------
         elif choix == "11":
-            top = agence.top_vehicules()
+            top = ls.top_vehicules()
             if top:
                 print("\n🏆 Top véhicules loués :")
                 for vid, count in top:
@@ -114,20 +112,16 @@ def main():
                 print("⚠️ Aucune donnée")
 
         elif choix == "12":
-            print(f"\n💰 Total gains agence : {agence.total_gains()} ")
-
-        elif choix == "0":
-            break
+            print(f"\n💰 Total gains agence : {ls.total_gains()} ")
 
         # ---------------- CLIENTS ----------------
         elif choix == "13":
             nom = input("Nom du client : ")
-            result = cs.ajouter_client(nom, agence)
-            if isinstance(result, dict):
-                print(f"✅ Client ajouté → ID: {result['id']} | Nom: {result['nom']}")
+            result, erreur = cs.ajouter_client(nom)
+            if erreur:
+                print(f"❌ {erreur}")
             else:
-                print(f"❌ {result}")       
-
+                print(f"✅ Client ajouté → ID: {result['id']} | Nom: {result['nom']}")
 
         elif choix == "14":
             clients = cs.lister_clients()
@@ -156,7 +150,7 @@ def main():
             elif isinstance(result, str):
                 print(f"❌ {result}")
             else:
-                print(f"✅ Client modifié : {result['id']} | {result['nom']}")
+                print(f"✅ Client modifié → ID: {result['id']} | Nom: {result['nom']}")
 
         elif choix == "17":
             client_id = int(input("Client ID : "))
@@ -165,8 +159,11 @@ def main():
             else:
                 print("❌ Client introuvable")
 
+        elif choix == "0":
+            break
+
         else:
-            print(" Choix invalide")
+            print("❌ Choix invalide")
 
 
 if __name__ == "__main__":
