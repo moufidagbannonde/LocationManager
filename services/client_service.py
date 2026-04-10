@@ -8,7 +8,7 @@ def get_clients():
     return charger_donnees(FICHIER_CLIENTS)
 
 
-# 🔹 Ajouter client
+#  Ajouter client
 def ajouter_client(nom):
     if not nom.strip():
         return "Nom invalide"
@@ -24,18 +24,18 @@ def ajouter_client(nom):
     return client, None
 
 
-# 🔹 Lister clients
+#  Lister clients
 def lister_clients():
     return get_clients()
 
 
-# 🔹 Rechercher client
+#  Rechercher client
 def rechercher_client(nom):
     clients = get_clients()
     return [c for c in clients if nom.lower() in c["nom"].lower()]
 
 
-# 🔹 Modifier client
+#  Modifier client
 def modifier_client(client_id, nouveau_nom):
     clients = get_clients()
 
@@ -50,7 +50,7 @@ def modifier_client(client_id, nouveau_nom):
     return None
 
 
-# 🔹 Supprimer client
+#  Supprimer client
 def supprimer_client(client_id):
     clients = get_clients()
     new_clients = [c for c in clients if c["id"] != client_id]

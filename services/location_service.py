@@ -20,7 +20,7 @@ def get_locations():
 
 
 
-# 🔹 Louer un véhicule
+#  Louer un véhicule
 def louer_vehicule(client_id, vehicule_id, jours):
     """
     Permet de créer une location (louer un véhicule).
@@ -80,7 +80,7 @@ def louer_vehicule(client_id, vehicule_id, jours):
     return location, None
 
 
-# 🔹 Retourner un véhicule
+#  Retourner un véhicule
 def retourner_vehicule(location_id):
     """
     Permet de retourner un véhicule (fin de location).
@@ -118,7 +118,7 @@ def retourner_vehicule(location_id):
     return True, None
 
 
-# 🔹 Voir toutes les locations
+#  Voir toutes les locations
 def voir_locations():
     """
     Retourne toutes les locations enregistrées.
@@ -129,7 +129,7 @@ def voir_locations():
     return [loc for loc in get_locations() if loc["statut"] == "en_cours"]
 
 
-# 🔹 Locations d'un client
+#  Locations d'un client
 def locations_par_client(client_id):
     """
     Récupère toutes les locations associées à un client donné.
@@ -143,7 +143,7 @@ def locations_par_client(client_id):
     return [loc for loc in get_locations() if loc["client_id"] == client_id]
 
 
-# 🔹 Top véhicules loués
+#  Top véhicules loués
 def top_vehicules():
     """
     Calcule les véhicules les plus loués.
@@ -167,7 +167,7 @@ def top_vehicules():
     return sorted(compteur.items(), key=lambda x: x[1], reverse=True)
 
 
-# 🔹 Calcul prix total
+#  Calcul prix total
 def calcul_prix(vehicule_id, jours):
     """
     Calcule le prix total d'une location.
@@ -187,7 +187,7 @@ def calcul_prix(vehicule_id, jours):
     return 0  # Véhicule non trouvé
 
 
-# 🔹 Total gains agence
+#  Total gains agence
 def total_gains():
     """
     Calcule le total des gains générés par toutes les locations.

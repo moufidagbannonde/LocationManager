@@ -13,7 +13,7 @@ def get_vehicules():
 
 
 
-# 🔹 Ajouter véhicule
+#  Ajouter véhicule
 def ajouter_vehicule(marque, modele, prix):
     vehicules = get_vehicules()
     vehicule = Vehicule(generate_id(vehicules), marque, modele, prix)
@@ -22,7 +22,7 @@ def ajouter_vehicule(marque, modele, prix):
     print("✅ Véhicule ajouté avec succès !")
 
 
-# 🔹 Lister tous les véhicules
+#  Lister tous les véhicules
 def lister_vehicules():
     vehicules = get_vehicules()
     if not vehicules:
@@ -32,7 +32,7 @@ def lister_vehicules():
         afficher_vehicule(v)
 
 
-# 🔹 Véhicules disponibles
+#  Véhicules disponibles
 def vehicules_disponibles():
     vehicules = get_vehicules()
     disponibles = [v for v in vehicules if v["disponible"]]
@@ -43,7 +43,7 @@ def vehicules_disponibles():
         afficher_vehicule(v)
 
 
-# 🔹 Modifier véhicule
+#  Modifier véhicule
 def modifier_vehicule(vehicule_id, marque=None, modele=None, prix=None):
     vehicules = get_vehicules()
     for v in vehicules:
@@ -60,7 +60,7 @@ def modifier_vehicule(vehicule_id, marque=None, modele=None, prix=None):
     print("❌ Véhicule non trouvé")
 
 
-# 🔹 Supprimer véhicule
+#  Supprimer véhicule
 def supprimer_vehicule(vehicule_id):
     vehicules = get_vehicules()
     new_vehicules = [v for v in vehicules if v["id"] != vehicule_id]
@@ -71,7 +71,7 @@ def supprimer_vehicule(vehicule_id):
     print("✅ Véhicule supprimé")
 
 
-# 🔹 Filtrer par prix
+#  Filtrer par prix
 def filtrer_par_prix(prix_max):
     vehicules = get_vehicules()
     result = [v for v in vehicules if v["prix_par_jour"] <= prix_max]
@@ -82,7 +82,7 @@ def filtrer_par_prix(prix_max):
         afficher_vehicule(v)
 
 
-# 🔹 Marquer indisponible / disponible (appelé par location_service)
+#  Marquer indisponible / disponible (appelé par location_service)
 def set_disponibilite(vehicule_id, disponible):
     vehicules = get_vehicules()
     for v in vehicules:
