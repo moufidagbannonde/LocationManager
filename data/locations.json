@@ -4,5 +4,19 @@
         "vehicule_id": 1,
         "client_id": 1,
         "jours": 12
+    },
+    {
+        "id": 2,
+        "vehicule_id": 1,
+        "client_id": 1,
+        "jours": 15,
+        "statut": "terminee"
+    },
+    {
+        "id": 3,
+        "vehicule_id": 2,
+        "client_id": 1,
+        "jours": 28,
+        "statut": "en_cours"
     }
 ]

@@ -11,6 +11,13 @@
         "marque": "Artisdie",
         "modele": "A-47",
         "prix_par_jour": 14785.0,
+        "disponible": false
+    },
+    {
+        "id": 3,
+        "marque": "tet",
+        "modele": "test",
+        "prix_par_jour": 12300.0,
         "disponible": true
     }
 ]
