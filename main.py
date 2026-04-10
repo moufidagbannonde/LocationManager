@@ -1,4 +1,6 @@
 from services.agence import Agence
+from services.display import afficher_vehicule, afficher_client, afficher_location
+import services.client_service as cs
 
 
 def main():
@@ -10,84 +12,86 @@ def main():
         print("\n========== MENU ==========")
         print("1. Ajouter véhicule")
         print("2. Voir véhicules")
-        print("3. Ajouter client")
-        print("4. Voir clients")
-        print("5. Louer véhicule")
-        print("6. Retourner véhicule")
-        print("7. Voir locations")
-        print("8. Filtrer par prix")
-        print("9. Véhicules les plus loués")
+        print("3. Filtrer véhicules disponibles")
+        print("4. Modifier véhicule")
+        print("5. Supprimer véhicule")
+        print("6. Filtrer par prix")
+        print("7. Louer véhicule")
+        print("8. Retourner véhicule")
+        print("9. Voir toutes les locations")
         print("10. Locations d'un client")
-        print("11. Total gains agence")
+        print("11. Top véhicules loués")
+        print("12. Total gains agence")
+        print("--- Clients ---")
+        print("13. Ajouter client")
+        print("14. Lister clients")
+        print("15. Rechercher client")
+        print("16. Modifier client")
+        print("17. Supprimer client")
         print("0. Quitter")
         print("==========================")
 
         choix = input("Choix : ")
 
-        # ---------------- VEHICULES ----------------
         if choix == "1":
             marque = input("Marque : ")
             modele = input("Modèle : ")
-            prix = int(input("Prix par jour : "))
+            prix = float(input("Prix par jour : "))
 
-            v = agence.ajouter_vehicule(marque, modele, prix)
-            print(" Véhicule ajouté :", v)
+            agence.ajouter_vehicule(marque, modele, prix)
 
         elif choix == "2":
-            print("\n Véhicules :")
-            for v in agence.vehicules:
-                print(v)
+            agence.afficher_vehicules()
 
-        # ---------------- CLIENTS ----------------
         elif choix == "3":
-            nom = input("Nom client : ")
-            c = agence.ajouter_client(nom)
-            print(" Client ajouté :", c)
+            agence.vehicules_disponibles()
 
         elif choix == "4":
-            print("\n Clients :")
-            for c in agence.clients:
-                print(c)
+            id = int(input("ID : "))
+            marque = input("Nouvelle marque (vide si rien) : ")
+            modele = input("Nouveau modèle : ")
+            prix = input("Nouveau prix : ")
+
+            prix = float(prix) if prix else None
+
+            agence.modifier_vehicule(id, marque or None, modele or None, prix)
+
+        elif choix == "5":
+            id = int(input("ID à supprimer : "))
+            agence.supprimer_vehicule(id)
+
+        elif choix == "6":
+            prix = float(input("Prix max : "))
+            agence.filtrer_par_prix(prix)
 
         # ---------------- LOCATIONS ----------------
-        elif choix == "5":
+        elif choix == "7":
             client_id = int(input("Client ID : "))
             vehicule_id = int(input("Véhicule ID : "))
             jours = int(input("Nombre de jours : "))
-
             location = agence.louer_vehicule(client_id, vehicule_id, jours)
-
             if location:
                 prix = agence.calcul_prix(vehicule_id, jours)
-                print(f" Location créée : {location} | Prix total : {prix} DA")
+                afficher_location(location)
+                print(f"   💰 Prix total : {prix} DA")
             else:
-                print(" Véhicule indisponible ou introuvable")
+                print("❌ Véhicule indisponible ou introuvable")
 
-        elif choix == "6":
-            location_id = int(input("Location ID : "))
-
-            if agence.retourner_vehicule(location_id):
-                print(" Véhicule retourné")
-            else:
-                print(" Location introuvable")
-
-        elif choix == "7":
-            print("\n Locations :")
-            for l in agence.locations:
-                print(l)
-
-        # ---------------- LOGIQUE METIER ----------------
         elif choix == "8":
-            max_prix = int(input("Prix maximum : "))
-            result = agence.filtrer_par_prix(max_prix)
-
-            print("\n Véhicules filtrés :")
-            for v in result:
-                print(v)
+            location_id = int(input("Location ID : "))
+            if agence.retourner_vehicule(location_id):
+                print("✅ Véhicule retourné")
+            else:
+                print("❌ Location introuvable")
 
         elif choix == "9":
-            print("\n Top véhicules loués :")
-            print(agence.top_vehicules())
+            locs = agence.voir_locations()
+            if locs:
+                print("\n Locations en cours :")
+                for l in locs:
+                    afficher_location(l)
+            else:
+                print("⚠️ Aucune location en cours")
 
         elif choix == "10":
             client_id = int(input("Client ID : "))
@@ -95,18 +99,71 @@ def main():
             if locs:
                 print(f"\n Locations du client {client_id} :")
                 for l in locs:
-                    print(l)
+                    afficher_location(l)
             else:
-                print(" Aucune location pour ce client")
+                print("⚠️ Aucune location pour ce client")
 
+        # ---------------- STATS ----------------
         elif choix == "11":
-            print(f"\n Total gains agence : {agence.total_gains()} DA")
+            top = agence.top_vehicules()
+            if top:
+                print("\n🏆 Top véhicules loués :")
+                for vid, count in top:
+                    print(f"  Véhicule ID {vid} → {count} location(s)")
+            else:
+                print("⚠️ Aucune donnée")
 
-        # ---------------- QUITTER ----------------
+        elif choix == "12":
+            print(f"\n💰 Total gains agence : {agence.total_gains()} ")
+
         elif choix == "0":
-            agence.sauvegarder()
-            print(" Données sauvegardées. Fermeture du système...")
             break
+
+        # ---------------- CLIENTS ----------------
+        elif choix == "13":
+            nom = input("Nom du client : ")
+            result = cs.ajouter_client(nom, agence)
+            if isinstance(result, dict):
+                print(f"✅ Client ajouté → ID: {result['id']} | Nom: {result['nom']}")
+            else:
+                print(f"❌ {result}")       
+
+
+        elif choix == "14":
+            clients = cs.lister_clients()
+            if clients:
+                print("\n Clients :")
+                for c in clients:
+                    afficher_client(c)
+            else:
+                print("⚠️ Aucun client")
+
+        elif choix == "15":
+            nom = input("Nom à rechercher : ")
+            results = cs.rechercher_client(nom)
+            if results:
+                for c in results:
+                    afficher_client(c)
+            else:
+                print("⚠️ Aucun client trouvé")
+
+        elif choix == "16":
+            client_id = int(input("Client ID : "))
+            nouveau_nom = input("Nouveau nom : ")
+            result = cs.modifier_client(client_id, nouveau_nom)
+            if result is None:
+                print("❌ Client introuvable")
+            elif isinstance(result, str):
+                print(f"❌ {result}")
+            else:
+                print(f"✅ Client modifié : {result['id']} | {result['nom']}")
+
+        elif choix == "17":
+            client_id = int(input("Client ID : "))
+            if cs.supprimer_client(client_id):
+                print("✅ Client supprimé")
+            else:
+                print("❌ Client introuvable")
 
         else:
             print(" Choix invalide")

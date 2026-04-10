@@ -1,4 +1,14 @@
 [
-    {"id": 1, "nom": "Alice"},
-    {"id": 2, "nom": "Bob"}
+    {
+        "id": 1,
+        "nom": "Aristide"
+    },
+    {
+        "id": 3,
+        "nom": "Moufid modifi\u00e9"
+    },
+    {
+        "id": 4,
+        "nom": "Moufid"
+    }
 ]
