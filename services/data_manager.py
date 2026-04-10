@@ -8,7 +8,7 @@ def charger_donnees(fichier):
     with open(fichier, "r") as f:
         try:
             return json.load(f)
-        except:
+        except json.JSONDecodeError:
             return []
 
 def sauvegarder_donnees(fichier, data):

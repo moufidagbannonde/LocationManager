@@ -1,0 +1,4 @@
+[
+    {"id": 1, "marque": "Toyota", "modele": "Corolla", "prix_par_jour": 50, "disponible": true},
+    {"id": 2, "marque": "BMW", "modele": "X5", "prix_par_jour": 120, "disponible": true}
+]
