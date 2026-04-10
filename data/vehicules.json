@@ -1,0 +1,9 @@
+[
+    {
+        "id": 1,
+        "marque": "Honda",
+        "modele": "Wif",
+        "prix_par_jour": 1690.0,
+        "disponible": true
+    }
+]
