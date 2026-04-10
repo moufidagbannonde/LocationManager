@@ -1,6 +1,7 @@
 from services.data_manager import charger_donnees, sauvegarder_donnees
 from services.display import afficher_vehicule
 from models.vehicule import Vehicule
+from utils.generator import generate_id
 
 FICHIER_VEHICULES = "data/vehicules.json"
 
@@ -9,10 +10,7 @@ def get_vehicules():
     return charger_donnees(FICHIER_VEHICULES)
 
 
-def generate_id(data):
-    if not data:
-        return 1
-    return max(item["id"] for item in data) + 1
+
 
 
 # 🔹 Ajouter véhicule

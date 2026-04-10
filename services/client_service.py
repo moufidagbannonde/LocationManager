@@ -1,4 +1,5 @@
 from services.data_manager import charger_donnees, sauvegarder_donnees
+from utils.generator import generate_id
 
 FICHIER_CLIENTS = "data/clients.json"
 
@@ -8,19 +9,19 @@ def get_clients():
 
 
 # 🔹 Ajouter client
-def ajouter_client(nom, agence):
+def ajouter_client(nom):
     if not nom.strip():
         return "Nom invalide"
     clients = get_clients()
 
     client = {
-        "id": agence.generate_id(clients),
+        "id": generate_id(clients),
         "nom": nom.strip()
     }
 
     clients.append(client)
     sauvegarder_donnees(FICHIER_CLIENTS, clients)
-    return client
+    return client, None
 
 
 # 🔹 Lister clients
