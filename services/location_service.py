@@ -25,6 +25,7 @@ def louer_vehicule(client_id, vehicule_id, jours):
 
     # Vérifier que le véhicule existe et est disponible
     vehicules = vs.get_vehicules()
+    # next pour récupérer le premier élément répondant à la condition
     vehicule = next((v for v in vehicules if v["id"] == vehicule_id), None)
     if vehicule is None:
         return None, "Véhicule introuvable"
