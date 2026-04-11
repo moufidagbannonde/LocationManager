@@ -3,15 +3,15 @@ import os
 
 def charger_donnees(fichier):
     """
-    🔹 Cette fonction lit un fichier JSON et retourne son contenu.
+     Cette fonction lit un fichier JSON et retourne son contenu.
 
     PARAMÈTRE :
     fichier = chemin du fichier (ex: data/vehicules.json)
 
-    🔥 CAS IMPORTANT :
     - Si le fichier n'existe pas → retourne []
     - Si le fichier est vide ou cassé → retourne []
 
+    
     """
 
     # Vérifie si le fichier existe
@@ -29,17 +29,13 @@ def charger_donnees(fichier):
 
 def sauvegarder_donnees(fichier, data):
     """
-    🔹 Cette fonction sauvegarde des données dans un fichier JSON
+     Cette fonction sauvegarde des données dans un fichier JSON
 
     PARAMÈTRES :
     fichier = chemin du fichier
     data = liste de dictionnaires
 
-    👉 Exemple :
-    [
-        {"id": 1, "marque": "Toyota"},
-        {"id": 2, "marque": "BMW"}
-    ]
+
     """
 
     with open(fichier, "w") as f:
