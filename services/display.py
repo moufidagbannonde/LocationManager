@@ -1,6 +1,6 @@
 def afficher_vehicule(v):
     dispo = "✅ Disponible" if v["disponible"] else "❌ Indisponible"
-    print(f"  [{v['id']}] {v['marque']} {v['modele']} — {v['prix_par_jour']} DA/jour — {dispo}")
+    print(f"  [{v['id']}] {v['marque']} {v['modele']} — {v['prix_par_jour']} /jour — {dispo}")
 
 def afficher_client(c):
     print(f"  [{c['id']}] {c['nom']}")

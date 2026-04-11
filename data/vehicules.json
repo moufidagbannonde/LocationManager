@@ -1,23 +1,16 @@
 [
     {
         "id": 1,
-        "marque": "Cadillac",
-        "modele": "C-14",
-        "prix_par_jour": 1540.0,
-        "disponible": true
-    },
-    {
-        "id": 2,
-        "marque": "Artisdie",
-        "modele": "A-47",
-        "prix_par_jour": 14785.0,
+        "marque": "Mercedes",
+        "modele": "M15",
+        "prix_par_jour": 2000.0,
         "disponible": false
     },
     {
-        "id": 3,
-        "marque": "tet",
-        "modele": "test",
-        "prix_par_jour": 12300.0,
-        "disponible": true
+        "id": 2,
+        "marque": "Mitsubishi",
+        "modele": "MI20",
+        "prix_par_jour": 1870.0,
+        "disponible": false
     }
 ]

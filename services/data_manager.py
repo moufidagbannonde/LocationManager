@@ -12,7 +12,6 @@ def charger_donnees(fichier):
     - Si le fichier n'existe pas → retourne []
     - Si le fichier est vide ou cassé → retourne []
 
-    👉 Ça évite que ton programme plante.
     """
 
     # Vérifie si le fichier existe
@@ -44,5 +43,5 @@ def sauvegarder_donnees(fichier, data):
     """
 
     with open(fichier, "w") as f:
-        # indent=4 → rend le JSON lisible (important pour debug)
+        # indent=4 → rend le JSON lisible 
         json.dump(data, f, indent=4)

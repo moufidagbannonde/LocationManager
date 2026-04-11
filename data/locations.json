@@ -1,22 +1,23 @@
 [
     {
         "id": 1,
-        "vehicule_id": 1,
+        "vehicule_id": 2,
         "client_id": 1,
-        "jours": 12
+        "jours": 10,
+        "statut": "terminee"
     },
     {
         "id": 2,
         "vehicule_id": 1,
-        "client_id": 1,
-        "jours": 15,
-        "statut": "terminee"
+        "client_id": 2,
+        "jours": 90,
+        "statut": "en_cours"
     },
     {
         "id": 3,
         "vehicule_id": 2,
-        "client_id": 1,
-        "jours": 28,
+        "client_id": 3,
+        "jours": 40,
         "statut": "en_cours"
     }
 ]
