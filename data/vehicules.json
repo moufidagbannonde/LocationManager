@@ -4,699 +4,807 @@
         "marque": "Toyota",
         "modele": "Corolla",
         "prix_par_jour": 15000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "GR-800-UX"
     },
     {
         "id": 2,
         "marque": "Honda",
         "modele": "Civic",
         "prix_par_jour": 16000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "XR-884-WD"
     },
     {
         "id": 3,
         "marque": "Hyundai",
         "modele": "Elantra",
         "prix_par_jour": 15000.0,
-        "disponible": false
+        "disponible": false,
+        "immatriculation": "QS-392-FB"
     },
     {
         "id": 4,
         "marque": "Kia",
         "modele": "Rio",
         "prix_par_jour": 13000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "NP-963-FA"
     },
     {
         "id": 5,
         "marque": "Nissan",
         "modele": "Altima",
         "prix_par_jour": 17000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "JF-270-XK"
     },
     {
         "id": 6,
         "marque": "Ford",
         "modele": "Focus",
         "prix_par_jour": 16500.0,
-        "disponible": false
+        "disponible": false,
+        "immatriculation": "OD-828-NU"
     },
     {
         "id": 7,
         "marque": "Chevrolet",
         "modele": "Malibu",
         "prix_par_jour": 18000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "CY-253-ZH"
     },
     {
         "id": 8,
         "marque": "Volkswagen",
         "modele": "Golf",
         "prix_par_jour": 17500.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "YE-934-GM"
     },
     {
         "id": 9,
         "marque": "BMW",
         "modele": "Serie 3",
         "prix_par_jour": 35000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "RC-270-BI"
     },
     {
         "id": 10,
         "marque": "Mercedes",
         "modele": "Classe C",
         "prix_par_jour": 36000.0,
-        "disponible": false
+        "disponible": false,
+        "immatriculation": "JY-304-XB"
     },
     {
         "id": 11,
         "marque": "Audi",
         "modele": "A4",
         "prix_par_jour": 34000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "MW-190-DA"
     },
     {
         "id": 12,
         "marque": "Peugeot",
         "modele": "308",
         "prix_par_jour": 17000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "FC-775-OI"
     },
     {
         "id": 13,
         "marque": "Renault",
         "modele": "Megane",
         "prix_par_jour": 16500.0,
-        "disponible": false
+        "disponible": false,
+        "immatriculation": "FU-480-XV"
     },
     {
         "id": 14,
         "marque": "Dacia",
         "modele": "Sandero",
         "prix_par_jour": 9500.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "YW-849-UK"
     },
     {
         "id": 15,
         "marque": "Mazda",
         "modele": "Mazda 3",
         "prix_par_jour": 18000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "VF-423-MK"
     },
     {
         "id": 16,
         "marque": "Subaru",
         "modele": "Impreza",
         "prix_par_jour": 20000.0,
-        "disponible": false
+        "disponible": false,
+        "immatriculation": "SE-201-SH"
     },
     {
         "id": 17,
         "marque": "Tesla",
         "modele": "Model 3",
         "prix_par_jour": 40000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "XF-927-PO"
     },
     {
         "id": 18,
         "marque": "Lexus",
         "modele": "IS",
         "prix_par_jour": 37000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "KK-275-XH"
     },
     {
         "id": 19,
         "marque": "Volvo",
         "modele": "S60",
         "prix_par_jour": 33000.0,
-        "disponible": false
+        "disponible": false,
+        "immatriculation": "AS-651-PW"
     },
     {
         "id": 20,
         "marque": "Jaguar",
         "modele": "XE",
         "prix_par_jour": 39000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "DQ-891-UE"
     },
     {
         "id": 21,
         "marque": "Land Rover",
         "modele": "Discovery Sport",
         "prix_par_jour": 42000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "ZB-366-SK"
     },
     {
         "id": 22,
         "marque": "Porsche",
         "modele": "Panamera",
         "prix_par_jour": 60000.0,
-        "disponible": false
+        "disponible": false,
+        "immatriculation": "DI-278-XJ"
     },
     {
         "id": 23,
         "marque": "Ferrari",
         "modele": "Roma",
         "prix_par_jour": 120000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "FC-534-IW"
     },
     {
         "id": 24,
         "marque": "Lamborghini",
         "modele": "Huracan",
         "prix_par_jour": 130000.0,
-        "disponible": false
+        "disponible": false,
+        "immatriculation": "UL-124-MB"
     },
     {
         "id": 25,
         "marque": "Maserati",
         "modele": "Ghibli",
         "prix_par_jour": 70000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "PC-442-YV"
     },
     {
         "id": 26,
         "marque": "Bentley",
         "modele": "Continental GT",
         "prix_par_jour": 150000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "UV-326-GA"
     },
     {
         "id": 27,
         "marque": "Rolls-Royce",
         "modele": "Ghost",
         "prix_par_jour": 200000.0,
-        "disponible": false
+        "disponible": false,
+        "immatriculation": "PB-304-XW"
     },
     {
         "id": 28,
         "marque": "Aston Martin",
         "modele": "DB11",
         "prix_par_jour": 140000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "TQ-519-WF"
     },
     {
         "id": 29,
         "marque": "Bugatti",
         "modele": "Chiron",
         "prix_par_jour": 500000.0,
-        "disponible": false
+        "disponible": false,
+        "immatriculation": "OA-689-HQ"
     },
     {
         "id": 30,
         "marque": "Pagani",
         "modele": "Huayra",
         "prix_par_jour": 450000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "WQ-825-MA"
     },
     {
         "id": 31,
         "marque": "Koenigsegg",
         "modele": "Jesko",
         "prix_par_jour": 480000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "IL-501-WQ"
     },
     {
         "id": 32,
         "marque": "McLaren",
         "modele": "720S",
         "prix_par_jour": 135000.0,
-        "disponible": false
+        "disponible": false,
+        "immatriculation": "SH-842-XN"
     },
     {
         "id": 33,
         "marque": "Genesis",
         "modele": "G70",
         "prix_par_jour": 31000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "QX-343-UB"
     },
     {
         "id": 34,
         "marque": "Infiniti",
         "modele": "Q50",
         "prix_par_jour": 29000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "YU-796-KU"
     },
     {
         "id": 35,
         "marque": "Acura",
         "modele": "TLX",
         "prix_par_jour": 30000.0,
-        "disponible": false
+        "disponible": false,
+        "immatriculation": "LJ-691-PG"
     },
     {
         "id": 36,
         "marque": "Alfa Romeo",
         "modele": "Giulia",
         "prix_par_jour": 32000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "QB-644-LD"
     },
     {
         "id": 37,
         "marque": "Skoda",
         "modele": "Octavia",
         "prix_par_jour": 16000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "VM-421-MZ"
     },
     {
         "id": 38,
         "marque": "Seat",
         "modele": "Leon",
         "prix_par_jour": 15500.0,
-        "disponible": false
+        "disponible": false,
+        "immatriculation": "ZJ-767-WI"
     },
     {
         "id": 39,
         "marque": "Cupra",
         "modele": "Formentor",
         "prix_par_jour": 21000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "KU-153-MZ"
     },
     {
         "id": 40,
         "marque": "Mini",
         "modele": "Cooper",
         "prix_par_jour": 22000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "MI-171-CK"
     },
     {
         "id": 41,
         "marque": "Smart",
         "modele": "Fortwo",
         "prix_par_jour": 12000.0,
-        "disponible": false
+        "disponible": false,
+        "immatriculation": "MC-612-NC"
     },
     {
         "id": 42,
         "marque": "Suzuki",
         "modele": "Swift",
         "prix_par_jour": 13000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "PI-101-MN"
     },
     {
         "id": 43,
         "marque": "Mitsubishi",
         "modele": "Lancer",
         "prix_par_jour": 15000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "QH-809-HM"
     },
     {
         "id": 44,
         "marque": "Isuzu",
         "modele": "D-Max",
         "prix_par_jour": 20000.0,
-        "disponible": false
+        "disponible": false,
+        "immatriculation": "FC-102-QH"
     },
     {
         "id": 45,
         "marque": "SsangYong",
         "modele": "Korando",
         "prix_par_jour": 18000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "HD-675-YI"
     },
     {
         "id": 46,
         "marque": "Great Wall",
         "modele": "Haval H6",
         "prix_par_jour": 17000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "QT-576-MC"
     },
     {
         "id": 47,
         "marque": "Chery",
         "modele": "Tiggo 7",
         "prix_par_jour": 16500.0,
-        "disponible": false
+        "disponible": false,
+        "immatriculation": "DU-647-KB"
     },
     {
         "id": 48,
         "marque": "Geely",
         "modele": "Coolray",
         "prix_par_jour": 17500.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "DP-171-BY"
     },
     {
         "id": 49,
         "marque": "BYD",
         "modele": "Han",
         "prix_par_jour": 28000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "KL-863-KG"
     },
     {
         "id": 50,
         "marque": "Rivian",
         "modele": "R1T",
         "prix_par_jour": 45000.0,
-        "disponible": false
+        "disponible": false,
+        "immatriculation": "QM-360-KQ"
     },
     {
         "id": 51,
         "marque": "Mercedes-Benz",
         "modele": "Classe S",
         "prix_par_jour": 90000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "UV-649-EB"
     },
     {
         "id": 52,
         "marque": "BMW",
         "modele": "Serie 7",
         "prix_par_jour": 85000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "DV-888-HN"
     },
     {
         "id": 53,
         "marque": "Audi",
         "modele": "A8",
         "prix_par_jour": 82000.0,
-        "disponible": false
+        "disponible": false,
+        "immatriculation": "GC-349-CV"
     },
     {
         "id": 54,
         "marque": "Tesla",
         "modele": "Model X",
         "prix_par_jour": 78000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "QJ-901-NT"
     },
     {
         "id": 55,
         "marque": "Porsche",
         "modele": "Panamera",
         "prix_par_jour": 95000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "MY-748-GX"
     },
     {
         "id": 56,
         "marque": "Bentley",
         "modele": "Flying Spur",
         "prix_par_jour": 150000.0,
-        "disponible": false
+        "disponible": false,
+        "immatriculation": "YL-718-LL"
     },
     {
         "id": 57,
         "marque": "Rolls-Royce",
         "modele": "Phantom",
         "prix_par_jour": 250000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "BZ-839-LC"
     },
     {
         "id": 58,
         "marque": "Lamborghini",
         "modele": "Urus",
         "prix_par_jour": 180000.0,
-        "disponible": false
+        "disponible": false,
+        "immatriculation": "HS-159-CF"
     },
     {
         "id": 59,
         "marque": "Ferrari",
         "modele": "Roma",
         "prix_par_jour": 200000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "QS-232-XJ"
     },
     {
         "id": 60,
         "marque": "Maserati",
         "modele": "Quattroporte",
         "prix_par_jour": 120000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "ES-459-CY"
     },
     {
         "id": 61,
         "marque": "Aston Martin",
         "modele": "DBX",
         "prix_par_jour": 170000.0,
-        "disponible": false
+        "disponible": false,
+        "immatriculation": "FM-141-MJ"
     },
     {
         "id": 62,
         "marque": "Jaguar",
         "modele": "XJ",
         "prix_par_jour": 95000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "DC-408-YG"
     },
     {
         "id": 63,
         "marque": "Land Rover",
         "modele": "Range Rover",
         "prix_par_jour": 110000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "KN-711-JU"
     },
     {
         "id": 64,
         "marque": "Cadillac",
         "modele": "Escalade",
         "prix_par_jour": 105000.0,
-        "disponible": false
+        "disponible": false,
+        "immatriculation": "HT-767-PS"
     },
     {
         "id": 65,
         "marque": "Lincoln",
         "modele": "Navigator",
         "prix_par_jour": 98000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "ST-676-PP"
     },
     {
         "id": 66,
         "marque": "Genesis",
         "modele": "G90",
         "prix_par_jour": 85000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "ZJ-701-CS"
     },
     {
         "id": 67,
         "marque": "Infiniti",
         "modele": "QX80",
         "prix_par_jour": 90000.0,
-        "disponible": false
+        "disponible": false,
+        "immatriculation": "ZB-922-QR"
     },
     {
         "id": 68,
         "marque": "Acura",
         "modele": "MDX",
         "prix_par_jour": 78000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "NH-527-QP"
     },
     {
         "id": 69,
         "marque": "Volvo",
         "modele": "XC90",
         "prix_par_jour": 72000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "YE-543-NB"
     },
     {
         "id": 70,
         "marque": "Lexus",
         "modele": "LX 600",
         "prix_par_jour": 115000.0,
-        "disponible": false
+        "disponible": false,
+        "immatriculation": "SL-224-TI"
     },
     {
         "id": 71,
         "marque": "Toyota",
         "modele": "Land Cruiser",
         "prix_par_jour": 70000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "EJ-296-JD"
     },
     {
         "id": 72,
         "marque": "Honda",
         "modele": "Legend",
         "prix_par_jour": 65000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "RO-882-KC"
     },
     {
         "id": 73,
         "marque": "Hyundai",
         "modele": "Palisade",
         "prix_par_jour": 60000.0,
-        "disponible": false
+        "disponible": false,
+        "immatriculation": "VY-781-KF"
     },
     {
         "id": 74,
         "marque": "Kia",
         "modele": "Telluride",
         "prix_par_jour": 62000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "FA-376-MC"
     },
     {
         "id": 75,
         "marque": "Nissan",
         "modele": "Patrol",
         "prix_par_jour": 75000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "XR-854-LJ"
     },
     {
         "id": 76,
         "marque": "Ford",
         "modele": "Expedition",
         "prix_par_jour": 68000.0,
-        "disponible": false
+        "disponible": false,
+        "immatriculation": "HB-509-BG"
     },
     {
         "id": 77,
         "marque": "Chevrolet",
         "modele": "Tahoe",
         "prix_par_jour": 69000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "FX-787-QZ"
     },
     {
         "id": 78,
         "marque": "Volkswagen",
         "modele": "Touareg",
         "prix_par_jour": 64000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "AB-612-UK"
     },
     {
         "id": 79,
         "marque": "Peugeot",
         "modele": "508",
         "prix_par_jour": 42000.0,
-        "disponible": false
+        "disponible": false,
+        "immatriculation": "AX-916-YI"
     },
     {
         "id": 80,
         "marque": "Renault",
         "modele": "Talisman",
         "prix_par_jour": 41000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "UM-913-IZ"
     },
     {
         "id": 81,
         "marque": "Skoda",
         "modele": "Superb",
         "prix_par_jour": 39000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "SQ-959-GF"
     },
     {
         "id": 82,
         "marque": "Seat",
         "modele": "Leon",
         "prix_par_jour": 36000.0,
-        "disponible": false
+        "disponible": false,
+        "immatriculation": "NH-951-CR"
     },
     {
         "id": 83,
         "marque": "Cupra",
         "modele": "Formentor",
         "prix_par_jour": 45000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "XU-834-IB"
     },
     {
         "id": 84,
         "marque": "Mini",
         "modele": "Countryman",
         "prix_par_jour": 47000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "DR-297-HB"
     },
     {
         "id": 85,
         "marque": "Alfa Romeo",
         "modele": "Stelvio",
         "prix_par_jour": 52000.0,
-        "disponible": false
+        "disponible": false,
+        "immatriculation": "FO-851-AM"
     },
     {
         "id": 86,
         "marque": "Bugatti",
         "modele": "Chiron",
         "prix_par_jour": 500000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "DX-823-ZR"
     },
     {
         "id": 87,
         "marque": "Pagani",
         "modele": "Huayra",
         "prix_par_jour": 480000.0,
-        "disponible": false
+        "disponible": false,
+        "immatriculation": "GB-772-EU"
     },
     {
         "id": 88,
         "marque": "Koenigsegg",
         "modele": "Jesko",
         "prix_par_jour": 520000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "HZ-607-QA"
     },
     {
         "id": 89,
         "marque": "McLaren",
         "modele": "720S",
         "prix_par_jour": 210000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "BM-694-AH"
     },
     {
         "id": 90,
         "marque": "Rivian",
         "modele": "R1S",
         "prix_par_jour": 88000.0,
-        "disponible": false
+        "disponible": false,
+        "immatriculation": "FX-104-EN"
     },
     {
         "id": 91,
         "marque": "Lucid",
         "modele": "Air",
         "prix_par_jour": 90000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "OK-625-IF"
     },
     {
         "id": 92,
         "marque": "BYD",
         "modele": "Han EV",
         "prix_par_jour": 55000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "IR-515-LR"
     },
     {
         "id": 93,
         "marque": "Geely",
         "modele": "Monjaro",
         "prix_par_jour": 50000.0,
-        "disponible": false
+        "disponible": false,
+        "immatriculation": "PU-423-GH"
     },
     {
         "id": 94,
         "marque": "Changan",
         "modele": "UNI-K",
         "prix_par_jour": 47000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "UX-626-YY"
     },
     {
         "id": 95,
         "marque": "Great Wall",
         "modele": "Tank 500",
         "prix_par_jour": 53000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "UD-491-RJ"
     },
     {
         "id": 96,
         "marque": "Haval",
         "modele": "H9",
         "prix_par_jour": 48000.0,
-        "disponible": false
+        "disponible": false,
+        "immatriculation": "CI-436-VE"
     },
     {
         "id": 97,
         "marque": "Chery",
         "modele": "Tiggo 8",
         "prix_par_jour": 42000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "HY-350-AP"
     },
     {
         "id": 98,
         "marque": "Polestar",
         "modele": "Polestar 2",
         "prix_par_jour": 60000.0,
-        "disponible": true
+        "disponible": true,
+        "immatriculation": "WQ-233-ON"
     },
     {
         "id": 99,
         "marque": "Lotus",
         "modele": "Eletre",
         "prix_par_jour": 95000.0,
-        "disponible": false
+        "disponible": false,
+        "immatriculation": "JX-759-BB"
     },
     {
         "id": 100,
         "marque": "Spyker",
         "modele": "C8 Preliator",
         "prix_par_jour": 300000.0,
-        "disponible": false
+        "disponible": false,
+        "immatriculation": "QW-370-RT"
+    },
+    {
+        "id": 101,
+        "immatriculation": "MT-111-AM",
+        "marque": "Atsushi",
+        "modele": "Mura",
+        "prix_par_jour": 1500.0,
+        "disponible": true
     }
 ]

@@ -1,23 +1,9 @@
 [
     {
         "id": 1,
-        "vehicule_id": 2,
+        "immatriculation": "HY-350-AP",
         "client_id": 1,
-        "jours": 10,
+        "jours": 20,
         "statut": "terminee"
-    },
-    {
-        "id": 2,
-        "vehicule_id": 1,
-        "client_id": 2,
-        "jours": 90,
-        "statut": "en_cours"
-    },
-    {
-        "id": 3,
-        "vehicule_id": 2,
-        "client_id": 3,
-        "jours": 40,
-        "statut": "en_cours"
     }
 ]

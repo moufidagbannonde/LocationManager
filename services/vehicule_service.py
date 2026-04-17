@@ -10,19 +10,18 @@ def get_vehicules():
     return charger_donnees(FICHIER_VEHICULES)
 
 
-
-
-
-#  Ajouter véhicule
-def ajouter_vehicule(marque, modele, prix):
+def ajouter_vehicule(immatriculation, marque, modele, prix):
     vehicules = get_vehicules()
-    vehicule = Vehicule(generate_id(vehicules), marque, modele, prix)
+    immat = immatriculation.strip().upper()
+    if any(v["immatriculation"] == immat for v in vehicules):
+        print("❌ Immatriculation déjà existante")
+        return
+    vehicule = Vehicule(generate_id(vehicules), immat, marque, modele, prix)
     vehicules.append(vehicule.to_dict())
     sauvegarder_donnees(FICHIER_VEHICULES, vehicules)
-    print("✅ Véhicule ajouté avec succès !")
+    print(f"✅ Véhicule ajouté — {immat}")
 
 
-#  Lister tous les véhicules
 def lister_vehicules():
     vehicules = get_vehicules()
     if not vehicules:
@@ -32,10 +31,8 @@ def lister_vehicules():
         afficher_vehicule(v)
 
 
-#  Véhicules disponibles
 def vehicules_disponibles():
-    vehicules = get_vehicules()
-    disponibles = [v for v in vehicules if v["disponible"]]
+    disponibles = [v for v in get_vehicules() if v["disponible"]]
     if not disponibles:
         print("⚠️ Aucun véhicule disponible")
         return
@@ -43,11 +40,11 @@ def vehicules_disponibles():
         afficher_vehicule(v)
 
 
-#  Modifier véhicule
-def modifier_vehicule(vehicule_id, marque=None, modele=None, prix=None):
+def modifier_vehicule(immatriculation, marque=None, modele=None, prix=None):
     vehicules = get_vehicules()
+    immat = immatriculation.strip().upper()
     for v in vehicules:
-        if v["id"] == vehicule_id:
+        if v["immatriculation"] == immat:
             if marque:
                 v["marque"] = marque
             if modele:
@@ -60,10 +57,10 @@ def modifier_vehicule(vehicule_id, marque=None, modele=None, prix=None):
     print("❌ Véhicule non trouvé")
 
 
-#  Supprimer véhicule
-def supprimer_vehicule(vehicule_id):
+def supprimer_vehicule(immatriculation):
     vehicules = get_vehicules()
-    new_vehicules = [v for v in vehicules if v["id"] != vehicule_id]
+    immat = immatriculation.strip().upper()
+    new_vehicules = [v for v in vehicules if v["immatriculation"] != immat]
     if len(new_vehicules) == len(vehicules):
         print("❌ Véhicule non trouvé")
         return
@@ -71,10 +68,8 @@ def supprimer_vehicule(vehicule_id):
     print("✅ Véhicule supprimé")
 
 
-#  Filtrer par prix
 def filtrer_par_prix(prix_max):
-    vehicules = get_vehicules()
-    result = [v for v in vehicules if v["prix_par_jour"] <= prix_max]
+    result = [v for v in get_vehicules() if v["prix_par_jour"] <= prix_max]
     if not result:
         print("⚠️ Aucun véhicule dans cette gamme de prix")
         return
@@ -82,12 +77,16 @@ def filtrer_par_prix(prix_max):
         afficher_vehicule(v)
 
 
-#  Marquer indisponible / disponible (appelé par location_service)
-def set_disponibilite(vehicule_id, disponible):
+def set_disponibilite(immatriculation, disponible):
     vehicules = get_vehicules()
     for v in vehicules:
-        if v["id"] == vehicule_id:
+        if v["immatriculation"] == immatriculation:
             v["disponible"] = disponible
             sauvegarder_donnees(FICHIER_VEHICULES, vehicules)
             return True
     return False
+
+
+def get_vehicule_par_immat(immatriculation):
+    immat = immatriculation.strip().upper()
+    return next((v for v in get_vehicules() if v["immatriculation"] == immat), None)

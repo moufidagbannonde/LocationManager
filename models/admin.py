@@ -1,4 +1,4 @@
-class Client:
+class Admin:
     def __init__(self, id, nom, email, password):
         self.id = id
         self.nom = nom

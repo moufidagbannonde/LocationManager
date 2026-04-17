@@ -1,14 +1,8 @@
 [
     {
         "id": 1,
-        "nom": "Sahid"
-    },
-    {
-        "id": 2,
-        "nom": "Moufid"
-    },
-    {
-        "id": 3,
-        "nom": "Wifak"
+        "nom": "Teixeira",
+        "email": "moufidteixeira@gmail.com",
+        "password": "$2b$12$HEcrvRm3/Mt1Jy5uRAiapuJSs1x4/StgYc3tED2pYcIS9XNCimwtO"
     }
 ]
